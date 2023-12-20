@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-class Square
+""" creating a square classes """
+class Square:
+    pass
