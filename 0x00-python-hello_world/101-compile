@@ -1,0 +1,28 @@
+import py_compile
+import os
+
+def compile_python_script():
+    # Get the Python file name from the environment variable
+    py_file_name = os.environ.get('PYFILE')
+
+    if py_file_name is None:
+        print("Error: PYFILE environment variable not set.")
+        return
+
+    # Check if the Python file exists
+    if not os.path.exists(py_file_name):
+        print(f"Error: Python file '{py_file_name}' does not exist.")
+        return
+
+    # Generate the compiled file name (add 'c' as a suffix before the extension)
+    compiled_file_name = f"{os.path.splitext(py_file_name)[0]}c"
+
+    try:
+        # Compile the Python script
+        py_compile.compile(py_file_name, cfile=compiled_file_name, doraise=True)
+        print(f"Compilation successful. Output filename: {compiled_file_name}")
+    except py_compile.PyCompileError as e:
+        print(f"Compilation failed: {e}")
+
+if __name__ == "__main__":
+    compile_python_script()
