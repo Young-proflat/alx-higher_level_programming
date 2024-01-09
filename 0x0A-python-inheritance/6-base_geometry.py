@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-""" A class on BaseGeometry the accept an Area """
+""" creating a class """
 
 
 class BaseGeometry:
     """
-    Creating a class of Geometry 
+    BaseGeometry class
     """
-
-
     def area(self):
         """
         area method
