@@ -1,2 +1,2 @@
---lisr all database of your mysql server
+--list all database of your mysql server
 SHOW DATABASE
