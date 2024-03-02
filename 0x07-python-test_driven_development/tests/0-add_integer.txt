@@ -39,9 +39,8 @@ floating numbers and non floating numbers can be combined
 ::
 
     >>> add_integer(5, 2.0)
-    3
+    7
 
-Having just one value in the function
 
 :: 
 
@@ -52,7 +51,7 @@ Non-integer(string)
 
 ::
 
-    >>> add_integer("wee", 3)
+    >>> add_integer('wee', 3)
     Traceback (most recent last call):
     ....
     TypeError: a must be an integer 
