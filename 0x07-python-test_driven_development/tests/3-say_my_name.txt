@@ -1,28 +1,30 @@
-***********************
+************************
 Test -> 3-say_my_name.py
 ========================
 
 >>> say_my_name = __import__("3-say_my_name").say_my_name
 
-=======Success case========
+======Succes cases======
 
->>> say_my_name("Abdul", "lateef")
-My name is Abdul lateef
+>>> say_my_name("Naruto", "Uzumaki")
+My name is Naruto Uzumaki
 
->>> say_my_name("Ado", "lateef")
-My name is Ado lateef
+>>> say_my_name("Naruto")
+My name is Naruto 
 
-====Empty cases ==========
+=====Empty cases========
 
 >>> say_my_name("")
-Traceback (most recent last call):
+Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
 
+Por si acaso
+
 >>> say_my_name(None)
-Traceback (most recent last call):
+Traceback (most recent call last):
 ...
-TypeError: first_name must be a string 
+TypeError: first_name must be a string
 
 >>> say_my_name(None, "Dulce")
 Traceback (most recent call last):
