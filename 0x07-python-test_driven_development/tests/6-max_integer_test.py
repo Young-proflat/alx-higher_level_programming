@@ -1,7 +1,12 @@
-import unittest
+#!/usr/bin/python3
+"""Unittests for max_integer([..])."""
 
-class Testme(unittest.TestCase):
-    """ Test my code by unit test """
+import unittest
+max_integer = __import__('6-max_integer').max_integer
+
+
+class TestMaxInteger(unittest.TestCase):
+    """Define unittests for max_integer([..])."""
 
     def test_ordered_list(self):
         """Test an ordered list of integers."""
@@ -13,10 +18,10 @@ class Testme(unittest.TestCase):
         unordered = [1, 2, 4, 3]
         self.assertEqual(max_integer(unordered), 4)
 
-    def test_max_intger_list(self):
-        """ Test an highest number for a list."""
-        max_no = [4, 3, 1, 2]
-        self.assertEqual(max_integer(max_no), 4)
+    def test_max_at_begginning(self):
+        """Test a list with a beginning max value."""
+        max_at_beginning = [4, 3, 2, 1]
+        self.assertEqual(max_integer(max_at_beginning), 4)
 
     def test_empty_list(self):
         """Test an empty list."""
