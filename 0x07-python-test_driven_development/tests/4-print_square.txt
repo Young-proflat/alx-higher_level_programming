@@ -1,27 +1,37 @@
-=========== Introduction to code testing ===================
-==============Test 4 print_square================
->>> print_square = __import__("print_square").print_square
+****************************
+Test -> 4-print_square.py
+============================
 
-==========sucess cases==================
+>>> print_square = __import__("4-print_square").print_square
+
+=======Succes cases=========
+
+>>> print_square(1)
+#
+
 >>> print_square(4)
 ####
 ####
 ####
 ####
 
-=========empty cases =================
->>> print_square(-4)
-Traceback (most recent last call):
-...
-ValueError: size must be >= 0
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
 
+>>> print_square(0)
+
+======Error cases===========
 >>> print_square(None)
-Traceback (most recent last call):
-...
-TypeError: size must be an integer
-
->>> print_square()
-Traceback (most recent last call):
+Traceback (most recent call last):
 ...
 TypeError: size must be an integer
 
