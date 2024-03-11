@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""creating a base class"""
+"""Creating a base class"""
 
 import json
 import csv
@@ -7,15 +7,15 @@ import os
 
 
 class Base:
-    """Defining a class"""
+    """Defining class Base"""
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """initializing a class base"""
+        """Initializing class Base"""
         if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-        else: 
+        else:
             self.id = id
 
     @staticmethod
