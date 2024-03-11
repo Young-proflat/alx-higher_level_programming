@@ -4,14 +4,15 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Defining a class"""
+    """Defining square class"""
     def __init__(self, size, x=0, y=0, id=None):
-        """Intiliazing the square class"""
+        """Initializing square class"""
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """Printing the square class by overloading __str__"""
-        return"[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.si                                                ze)
+        """Printing square class by overloading __str__ method"""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
 
     @property
     def size(self):
@@ -20,13 +21,13 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        """ Settign size of square"""
+        """Setting size of square"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-        """updating square class"""
-         if args is not None and len(args) != 0:
+        """Updating square class"""
+        if args is not None and len(args) != 0:
             if len(args) >= 1:
                 if type(args[0]) != int and args[0] is not None:
                     raise TypeError("id must be an integer")
